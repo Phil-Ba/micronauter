@@ -7,7 +7,7 @@ import javax.inject.Singleton;
 public class Bean1 {
 
     @Inject
-    Bean2Int bean2;
+    Bean2 bean2;
 
     public void call(){
         System.out.println(bean2.hello());
