@@ -52,20 +52,24 @@ compileTestKotlin.kotlinOptions {
 
 dependencies {
 
-    implementation(kotlin("stdlib-jdk8"))
-    implementation(kotlin("reflect"))
+    compile(kotlin("stdlib-jdk8"))
+    compile(kotlin("reflect"))
 
-    implementation(platform("io.micronaut:micronaut-bom:$micronautVersion"))
-    implementation("io.micronaut:micronaut-inject")
-    implementation("io.micronaut:micronaut-core")
-    implementation("io.micronaut:micronaut-runtime")
+    compile(platform("io.micronaut:micronaut-bom:$micronautVersion"))
+    compile("io.micronaut:micronaut-core")
+    compile("io.micronaut:micronaut-inject")
+    compile("io.micronaut:micronaut-runtime")
+    compile("io.micronaut:micronaut-http-server-netty")
+    
+    compile("org.apache.logging.log4j:log4j-core:2.11.2")
+    compile("org.apache.logging.log4j:log4j-slf4j-impl:2.11.2")
 
-    annotationProcessor("io.micronaut:micronaut-inject-java")
-    kapt("io.micronaut:micronaut-inject-java")
+    annotationProcessor("io.micronaut:micronaut-inject-java:$micronautVersion")
+    kapt("io.micronaut:micronaut-inject-java:$micronautVersion")
 
-    kaptTest("io.micronaut:micronaut-inject-java")
-    testImplementation("org.junit.jupiter:junit-jupiter-engine:5.4.0")
+    kaptTest("io.micronaut:micronaut-inject-java:$micronautVersion")
+    testCompile("org.junit.jupiter:junit-jupiter-engine:5.4.0")
 //    testImplementation("io.micronaut:micronaut-inject")
-    testImplementation("org.mockito:mockito-junit-jupiter:2.22.0")
-    testImplementation("io.micronaut.test:micronaut-test-junit5:$micronautTestVersion")
+    testCompile("org.mockito:mockito-junit-jupiter:2.22.0")
+    testCompile("io.micronaut.test:micronaut-test-junit5:$micronautTestVersion")
 }
