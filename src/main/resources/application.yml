@@ -1,0 +1,7 @@
+micronaut:
+  application:
+    name: hello-world-server
+  http:
+    client:
+      read-timeout: 5s
+

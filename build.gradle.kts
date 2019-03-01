@@ -58,13 +58,15 @@ dependencies {
     compile(platform("io.micronaut:micronaut-bom:$micronautVersion"))
     compile("io.micronaut:micronaut-core")
     compile("io.micronaut:micronaut-inject")
+//    compile("io.micronaut:micronaut-inject:$micronautVersion")
+    compile("io.micronaut:micronaut-http-client")
     compile("io.micronaut:micronaut-runtime")
     compile("io.micronaut:micronaut-http-server-netty")
     
     compile("org.apache.logging.log4j:log4j-core:2.11.2")
     compile("org.apache.logging.log4j:log4j-slf4j-impl:2.11.2")
 
-    annotationProcessor("io.micronaut:micronaut-inject-java:$micronautVersion")
+//    annotationProcessor("io.micronaut:micronaut-inject-java:$micronautVersion")
     kapt("io.micronaut:micronaut-inject-java:$micronautVersion")
 
     kaptTest("io.micronaut:micronaut-inject-java:$micronautVersion")
